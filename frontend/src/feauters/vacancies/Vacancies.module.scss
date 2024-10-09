@@ -1,0 +1,118 @@
+.container, .container-vacancies{
+  display: flex;
+  padding: 2rem 3rem;
+  width: 100%;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+
+
+.left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: max-content;
+  .item{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 5px;
+    gap: 1rem;
+    .item-top{
+      display: flex;
+      justify-content: space-between;
+      .title{
+        color: var(--color-text);
+        font-weight: bold;
+      }
+      .status{
+        color: var(--green);
+      }
+    }
+    .description{
+      text-align: start;
+      line-height: 1.2;
+      font-size: 14px;
+      width: 30ch;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.left::-webkit-scrollbar {
+  display: none;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  padding:  2rem;
+  background-color: white;
+  border-radius: 5px;
+  gap: 2rem;
+  .right-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .vacancy-title{
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .eng{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+    }
+  }
+  .full-description{
+    text-align: start;
+    line-height: 1.2;
+    height: 100%;
+  }
+  .right-bottom{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    .contacts{
+      font-size: 20px;
+      font-weight: bold;
+      text-align: start;
+    }
+    .tags{
+      display: flex;
+      gap: 0.2rem
+    }
+  }
+  .button{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.border{
+  border: 2px solid var(--blue);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.container-vacancies{
+  .left{
+    width: 100%;
+    .item{
+      width: 70%;
+      .description{
+        width: 50ch;
+      }
+    }
+  }
+}
